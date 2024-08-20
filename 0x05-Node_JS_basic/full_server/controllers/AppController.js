@@ -1,14 +1,11 @@
 /**
- * App controller class
+ * Contains the miscellaneous route handlers.
  */
-export default class AppController {
-    /**
-     * Handles requests for `/` route
-     * @param {*} request   - request object
-     * @param {*} response  - response object
-     */
+class AppController {
     static getHomepage(request, response) {
-      response.statusCode = 200;
-      response.send('Hello Holberton School!');
+      response.status(200).send("Hello Holberton School!");
     }
   }
+  
+  export default AppController;
+  module.exports = AppController;
